@@ -15,13 +15,13 @@ import { Toaster } from "sonner";
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${domain}`),
   title: {
-    template: "%s | Baraa Alshaer - Full Stack Developer",
-    default: "Baraa Alshaer - Full Stack Developer & Portfolio",
+    template: "%s | Jay Patel - Full Stack Developer",
+    default: "Jay Patel - Full Stack Developer & Portfolio",
   },
   description:
-    "Explore the portfolio of Baraa Alshaer, Full Stack Developer specializing in React, Node.js, TypeScript, and modern web technologies. View projects, experience, and contact details.",
+    "Explore the portfolio of Jay Patel, Full Stack Developer specializing in React, Node.js, TypeScript, and modern web technologies. View projects, experience, and contact details.",
   keywords: [
-    "Baraa Alshaer",
+    "Jay Patel",
     "Full Stack Developer",
     "React Developer",
     "Node.js Developer",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     "AI Integration",
     "Remote Work",
   ].join(", "),
-  authors: [{ name: "Baraa Alshaer", url: websitePath.main }],
-  creator: "Baraa Alshaer",
-  publisher: "Baraa Alshaer",
+  authors: [{ name: "Jay Patel", url: websitePath.main }],
+  creator: "Jay Patel",
+  publisher: "Jay Patel",
   alternates: {
     canonical: websitePath.main,
     languages: {
@@ -57,17 +57,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     alternateLocale: "ar_SA",
-    title: "Baraa Alshaer - Full Stack Developer Portfolio",
+    title: "Jay Patel - Full Stack Developer Portfolio",
     description:
-      "Discover the work and experience of Baraa Alshaer, a passionate Full Stack Developer. Projects, skills, and contact info included.",
+      "Discover the work and experience of Jay Patel, a passionate Full Stack Developer. Projects, skills, and contact info included.",
     url: websitePath.main,
-    siteName: "Baraa Alshaer Portfolio",
+    siteName: "Jay Patel Portfolio",
     images: [
       {
         url: webImage,
         width: 400,
         height: 400,
-        alt: "Baraa Alshaer Portfolio Preview",
+        alt: "Jay Patel Portfolio Preview",
       },
     ],
     countryName: "Palestine",
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Baraa Alshaer - Full Stack Developer Portfolio",
+    title: "Jay Patel - Full Stack Developer Portfolio",
     description:
-      "Explore the portfolio of Baraa Alshaer, Full Stack Developer. Projects, experience, and contact details.",
+      "Explore the portfolio of Jay Patel, Full Stack Developer. Projects, experience, and contact details.",
     images: webImage,
     creator: "@balshaer",
   },
@@ -107,26 +107,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang='en' dir='ltr' suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+          rel='preconnect'
+          href='https://fonts.gstatic.com'
+          crossOrigin='anonymous'
         />
-        <meta name="apple-mobile-web-app-title" content="Baraa" />
+        <meta name='apple-mobile-web-app-title' content='Baraa' />
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Baraa Alshaer",
+              name: "Jay Patel",
               url: websitePath.main,
               image: webImage,
               sameAs: [
-                "https://github.com/balshaer",
+                "https://github.com/jaipatel248/",
                 "https://www.linkedin.com/in/balshaer/",
                 "https://www.youtube.com/@Codewithbaraa",
               ],
@@ -141,16 +141,16 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex relative flex-col min-h-screen">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-[var(--background)] bg-[linear-gradient(to_right,var(--border-background)_1px,transparent_1px),linear-gradient(to_bottom,var(--border-background)_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
+      <body className='flex relative flex-col min-h-screen vsc-domain-localhost'>
+        <div className='absolute inset-0 -z-10 h-full w-full bg-[var(--background)] bg-[linear-gradient(to_right,var(--border-background)_1px,transparent_1px),linear-gradient(to_bottom,var(--border-background)_1px,transparent_1px)] bg-[size:6rem_4rem]'></div>
         <SpeedInsights />
         <Analytics />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <CustomDialogProvider />
           <Toaster />
           <Navbar />
           <BackgroundEffect />
-          <main className="z-40 max-md:z-30 mx-auto w-full flex-grow">
+          <main className='z-40 max-md:z-30 mx-auto w-full flex-grow'>
             {children}
           </main>
           <Footer />

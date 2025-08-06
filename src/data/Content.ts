@@ -14,13 +14,13 @@ export const contentData: Content[] = [
   {
     _id: "content_hero",
     section: "hero",
-    title: "Baraa Alshaer",
+    title: "Jay Patel",
     subtitle: "Full-Stack Developer",
     description:
-   "I’m a full stack developer with 5 years of experience in front-end, back-end, and general software development. My main focus is integrating AI technologies to build smarter, more efficient web applications. I excel at creating clean, maintainable code and designing user-friendly solutions that solve real-world problems. Dedicated to continuous learning, I stay up to date with the latest trends in AI and modern development to deliver innovative, high-quality software.",
+      "I’m a full stack developer with 5 years of experience in front-end, back-end, and general software development. My main focus is integrating AI technologies to build smarter, more efficient web applications. I excel at creating clean, maintainable code and designing user-friendly solutions that solve real-world problems. Dedicated to continuous learning, I stay up to date with the latest trends in AI and modern development to deliver innovative, high-quality software.",
     content: {
       greeting: "Hello, I'm",
-      name: "Baraa Alshaer",
+      name: "Jay Patel",
       tagline: "Software Engineer | Full-Stack Developer",
       description:
         "I build seamless, efficient web applications with expertise in frontend, backend, and system design. My mission is to deliver high-quality digital solutions that meet real-world needs and advance technology.",
@@ -69,7 +69,7 @@ export const contentData: Content[] = [
     content: {
       message:
         "Do you have a project you'd like to collaborate on? Please feel free to reach out.",
-      copyright: "© 2025 Baraa Alshaer. All rights reserved.",
+      copyright: "© 2025 Jay Patel. All rights reserved.",
       links: {
         privacy: "/privacy",
         terms: "/terms",

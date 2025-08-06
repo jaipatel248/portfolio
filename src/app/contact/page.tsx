@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
 import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbSeparator,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
 import ContactForm from "@/components/sections/contact/ContactForm";
@@ -15,28 +15,28 @@ import { webImage, websitePath } from "@/data/Links";
 export const metadata: Metadata = {
   title: "Contact | Hire Full Stack Developer",
   description:
-    "Get in touch with Baraa Alshaer, a Full Stack Developer, for inquiries, collaborations, or to discuss your next project. Reach out through the contact form or email for professional web development services and consultations.",
+    "Get in touch with Jay Patel, a Full Stack Developer, for inquiries, collaborations, or to discuss your next project. Reach out through the contact form or email for professional web development services and consultations.",
   keywords:
     "contact developer, hire full stack developer, web development services, React developer, Node.js developer, TypeScript expert, freelance developer, web project consultation",
   openGraph: {
-    title: "Contact - Baraa Alshaer | Hire Full Stack Developer",
+    title: "Contact - Jay Patel | Hire Full Stack Developer",
     description:
-      "Contact Baraa Alshaer, a skilled Full Stack Developer, for project inquiries, consultations, or collaborations. Let's bring your web development ideas to life with modern technologies and best practices.",
+      "Contact Jay Patel, a skilled Full Stack Developer, for project inquiries, consultations, or collaborations. Let's bring your web development ideas to life with modern technologies and best practices.",
     url: websitePath.contact,
     images: [
       {
         url: webImage,
         width: 400,
         height: 400,
-        alt: "Contact Baraa Alshaer - Full Stack Developer",
+        alt: "Contact Jay Patel - Full Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact - Baraa Alshaer | Hire Full Stack Developer",
+    title: "Contact - Jay Patel | Hire Full Stack Developer",
     description:
-      "Reach out to Baraa Alshaer, a Full Stack Developer, for professional inquiries, collaborations, and web development services. Let's discuss your next project!",
+      "Reach out to Jay Patel, a Full Stack Developer, for professional inquiries, collaborations, and web development services. Let's discuss your next project!",
     images: webImage,
   },
 };
