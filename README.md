@@ -25,7 +25,7 @@ A modern, responsive portfolio website showcasing my work as a Full-Stack Develo
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/jaipatel248//alshaer.git
+   git clone https://github.com/jaipatel248/alshaer.git
    cd alshaer
    ```
 
