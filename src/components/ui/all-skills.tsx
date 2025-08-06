@@ -97,7 +97,17 @@ export const ALL_SKILLS: SkillData[] = [
   {
     name: "MongoDB",
     icon: <SiMongodb title='MongoDB' className='text-green-600' />,
-    category: "Programming Languages",
+    category: "Databases",
+  },
+  {
+    name: "MySQL",
+    icon: <SiMysql title='MySQL' className='text-blue-500' />,
+    category: "Databases",
+  },
+  {
+    name: "MongoDB",
+    icon: <SiMongodb title='MongoDB' className='text-green-600' />,
+    category: "Databases",
   },
   {
     name: "Go",
