@@ -5,10 +5,10 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Baraa Alshaer - Full Stack Developer",
-    short_name: "Baraa Alshaer",
+    name: "Jay Patel - Full Stack Developer",
+    short_name: "Jay Patel",
     description:
-      "Portfolio of Baraa Alshaer, a skilled Full Stack Developer with expertise in React, Node.js, TypeScript, and more.",
+      "Portfolio of Jay Patel, a skilled Full Stack Developer with expertise in React, Node.js, TypeScript, and more.",
     start_url: "/",
     display: "standalone",
     background_color: "#16161a",
@@ -41,7 +41,7 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/screenshot.png",
         sizes: "1280x720",
         type: "image/png",
-        label: "Baraa Alshaer Portfolio",
+        label: "Jay Patel Portfolio",
       },
     ],
   };

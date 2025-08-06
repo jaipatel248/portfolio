@@ -1,4 +1,4 @@
-# Baraa Alshaer - Portfolio
+# Jay Patel - Portfolio
 
 A modern, responsive portfolio website showcasing my work as a Full-Stack Developer. Built with Next.js and optimized for static hosting with no backend dependencies.
 
@@ -25,7 +25,7 @@ A modern, responsive portfolio website showcasing my work as a Full-Stack Develo
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/balshaer/alshaer.git
+   git clone https://github.com/jaipatel248//alshaer.git
    cd alshaer
    ```
 
@@ -100,11 +100,11 @@ Update your portfolio by editing the data files in `src/data/`:
 
 ## Contact
 
-- **Email**: alshaer.contact@gmail.com
-- **LinkedIn**: [linkedin.com/in/balshaer](https://linkedin.com/in/balshaer)
-- **GitHub**: [github.com/balshaer](https://github.com/balshaer)
+- **Email**: imjp248@gmail.com
+- **LinkedIn**: [linkedin.com/in/balshaer](https://www.linkedin.com/in/jaipatel248/)
+- **GitHub**: [github.com/balshaer](https://github.com/jaipatel248/)
 - **Portfolio**: [alshaer.vercel.app](https://alshaer.vercel.app)
 
 ---
 
-Built with ❤️ by Baraa Alshaer
+Built with ❤️ by Jay Patel

@@ -1,8 +1,8 @@
 export const domain = "alshaer.vercel.app";
-export const email = "alshaer.contact@gmail.com";
-export const phoneNumber = "970599349034";
+export const email = "imjp248@gmail.com";
+export const phoneNumber = "919999999999";
 export const linkedin = "https://www.linkedin.com/in/balshaer/";
-export const github = "https://github.com/balshaer";
+export const github = "https://github.com/jaipatel248/";
 export const whatsapp = `https://wa.me/${phoneNumber}`;
 export const youtube = "https://www.youtube.com/@Codewithbaraa";
 export const mailto = `mailto:${email}`;
@@ -28,13 +28,13 @@ export const projects = {
   samtax: "https://www.sam-tax.com/",
   gradientscss: {
     website: "https://gradientscss.vercel.app/",
-    github: "https://github.com/balshaer/gradients-css",
+    github: "https://github.com/jaipatel248//gradients-css",
   },
   raoufzadi: "https://raoufzadi.vercel.app/",
   najcenter: "https://naj.shamilapp.com/",
-  rove: "https://github.com/balshaer/rove",
+  rove: "https://github.com/jaipatel248//rove",
   sustainablestar: "https://sustainablestar.com.sa/",
-  bookstoreapi: "https://github.com/balshaer/bookstore-api",
+  bookstoreapi: "https://github.com/jaipatel248//bookstore-api",
 };
 
 export const webImage =

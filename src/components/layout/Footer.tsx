@@ -40,7 +40,7 @@ export default function Footer() {
 
   // Default content fallback
   const defaultFooterContent = {
-    title: "Baraa Alshaer",
+    title: "Jay Patel",
     description:
       "Full-Stack Developer specializing in creating seamless and efficient web applications.",
     content: {
@@ -92,12 +92,12 @@ export default function Footer() {
 
         {
           title: "GitHub",
-          link: "https://github.com/balshaer",
+          link: "https://github.com/jaipatel248/",
           external: true,
         },
         {
           title: "LinkedIn",
-          link: "https://linkedin.com/in/balshaer",
+          link: "https://www.linkedin.com/in/jaipatel248/",
           external: true,
         },
       ],

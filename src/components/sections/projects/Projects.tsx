@@ -214,17 +214,20 @@ const Projects = () => {
   };
 
   return (
-    <section data-slot="panel" id="projects">
-      <div data-slot="panel-header" className="screen-line-after px-4">
+    <section data-slot='panel' id='projects'>
+      <div data-slot='panel-header' className='screen-line-after px-4'>
         <h2
-          data-slot="panel-title"
-          className="section-title"
+          data-slot='panel-title'
+          className='section-title'
           style={{ color: "var(--headline)" }}
         >
           Projects
         </h2>
         {/* ==== BEGIN: Proud Projects Intro ==== */}
-        <p className="mt-2 mb-6 text-base font-mono" style={{ color: "var(--card-paragraph)" }}>
+        <p
+          className='mt-2 mb-6 text-base font-mono'
+          style={{ color: "var(--card-paragraph)" }}
+        >
           These are some of my projects I’m proud of.
         </p>
         {/* ==== END: Proud Projects Intro ==== */}
@@ -233,21 +236,19 @@ const Projects = () => {
       {projectsData.map((project) => (
         <div
           key={project.id}
-          className="border-b"
+          className='border-b'
           style={{ borderColor: "var(--card-border-color)" }}
           data-state={openProjectId === project.id ? "open" : "closed"}
         >
-          <div className="flex items-center ">
-            <div
-              className="mx-4 flex size-6 bg-[var(--card-background)] h-8 w-8 border  p-1 rounded-full  shrink-0"
-            >
+          <div className='flex items-center '>
+            <div className='mx-4 flex size-6 bg-[var(--card-background)] h-8 w-8 border  p-1 rounded-full  shrink-0'>
               <img
                 alt={`${project.title} logo`}
-                loading="lazy"
+                loading='lazy'
                 width={32}
                 height={32}
-                className="rounded-full"
-                decoding="async"
+                className='rounded-full'
+                decoding='async'
                 src={`/logos/${project.logoFileName}`}
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).src =
@@ -257,108 +258,117 @@ const Projects = () => {
               />
             </div>
             <div
-              className="flex-1 border-l border-dashed"
+              className='flex-1 border-l border-dashed'
               style={{ borderColor: "var(--card-border-color)" }}
             >
               <button
-                type="button"
+                type='button'
                 aria-controls={`radix-${project.id}`}
                 aria-expanded={openProjectId === project.id}
                 data-state={openProjectId === project.id ? "open" : "closed"}
-                className="group/project flex w-full items-center gap-4 p-4 pr-2 text-left select-none"
+                className='group/project flex w-full items-center gap-4 p-4 pr-2 text-left select-none'
                 onClick={() => toggleProject(project.id)}
                 style={{ color: "var(--main)" }}
               >
-                <div className="flex-1">
+                <div className='flex-1'>
                   <h3
-                    className="mb-1 leading-snug font-medium"
+                    className='mb-1 leading-snug font-medium'
                     style={{ color: "var(--card-headline)" }}
                   >
                     {project.title}
                   </h3>
-                  <dl className="text-sm" style={{ color: "var(--card-paragraph)" }}>
-                    <dt className="sr-only">Period</dt>
-                    <dd className="flex items-center gap-0.5">
+                  <dl
+                    className='text-sm'
+                    style={{ color: "var(--card-paragraph)" }}
+                  >
+                    <dt className='sr-only'>Period</dt>
+                    <dd className='flex items-center gap-0.5'>
                       <span>
                         {project.created
-                          ? new Date(project.created).toLocaleDateString("en-US", {
-                              year: "numeric",
-                              month: "2-digit",
-                            })
+                          ? new Date(project.created).toLocaleDateString(
+                              "en-US",
+                              {
+                                year: "numeric",
+                                month: "2-digit",
+                              }
+                            )
                           : "Unknown"}
                       </span>
-                      <span className="font-mono">—</span>
+                      <span className='font-mono'>—</span>
                       {project.status === "Published" && project.updated === ""
                         ? "Present"
                         : project.updated
-                        ? new Date(project.updated).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "2-digit",
-                          })
-                        : "Unknown"}
+                          ? new Date(project.updated).toLocaleDateString(
+                              "en-US",
+                              {
+                                year: "numeric",
+                                month: "2-digit",
+                              }
+                            )
+                          : "Unknown"}
                     </dd>
                   </dl>
                 </div>
                 <a
-                  className="flex size-6 shrink-0 items-center justify-center"
+                  className='flex size-6 shrink-0 items-center justify-center'
                   href={project.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-state="closed"
-                  data-slot="tooltip-trigger"
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  data-state='closed'
+                  data-slot='tooltip-trigger'
                   style={{ color: "var(--link-color)" }}
                 >
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns='http://www.w3.org/2000/svg'
                     width={24}
                     height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
                     strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-link pointer-events-none size-4"
-                    aria-hidden="true"
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    className='lucide lucide-link pointer-events-none size-4'
+                    aria-hidden='true'
                     style={{ stroke: "var(--link-color)" }}
                   >
-                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                    <path d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71' />
+                    <path d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71' />
                   </svg>
-                  <span className="sr-only">Open Project Link</span>
+                  <span className='sr-only'>Open Project Link</span>
                 </a>
                 <div
-                  className="shrink-0"
-                  aria-hidden="true"
+                  className='shrink-0'
+                  aria-hidden='true'
                   style={{ color: "var(--paragraph)" }}
                 >
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns='http://www.w3.org/2000/svg'
                     width={24}
                     height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
                     strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
                     className={`lucide ${
                       openProjectId === project.id
                         ? "lucide-chevrons-down-up"
                         : "lucide-chevrons-up-down"
                     } size-4`}
-                    aria-hidden="true"
+                    aria-hidden='true'
                     style={{ stroke: "var(--paragraph)" }}
                   >
                     {openProjectId === project.id ? (
                       <>
-                        <path d="m7 20 5-5 5 5"></path>
-                        <path d="m7 4 5 5 5-5"></path>
+                        <path d='m7 20 5-5 5 5'></path>
+                        <path d='m7 4 5 5 5-5'></path>
                       </>
                     ) : (
                       <>
-                        <path d="m7 15 5 5 5-5"></path>
-                        <path d="m7 9 5-5 5 5"></path>
+                        <path d='m7 15 5 5 5-5'></path>
+                        <path d='m7 9 5-5 5 5'></path>
                       </>
                     )}
                   </svg>
@@ -371,9 +381,9 @@ const Projects = () => {
               <motion.div
                 key={`content-${project.id}`}
                 id={`radix-${project.id}`}
-                initial="closed"
-                animate="open"
-                exit="closed"
+                initial='closed'
+                animate='open'
+                exit='closed'
                 variants={contentVariants}
                 style={{
                   overflow: "hidden",
@@ -383,25 +393,25 @@ const Projects = () => {
                 }}
               >
                 <div
-                  data-slot="prose"
-                  className="prose prose-sm max-w-none font-mono prose-headings:font-semibold prose-headings:text-2xl prose-lead:text-base prose-a:font-medium prose-a:underline prose-code:rounded-md prose-code:border prose-code:px-[0.3rem] prose-code:py-[0.2rem] prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none prose-hr:border-edge p-4"
+                  data-slot='prose'
+                  className='prose prose-sm max-w-none font-mono prose-headings:font-semibold prose-headings:text-2xl prose-lead:text-base prose-a:font-medium prose-a:underline prose-code:rounded-md prose-code:border prose-code:px-[0.3rem] prose-code:py-[0.2rem] prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none prose-hr:border-edge p-4'
                   style={{ color: "var(--card-paragraph)" }}
                 >
                   <ProjectDescription description={project.description} />
                   {project.videoUrl && (
-                    <p className="mb-4 list-disc ml-6 space-y-2">
+                    <p className='mb-4 list-disc ml-6 space-y-2'>
                       <a
                         href={project.videoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline"
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='underline'
                         style={{ color: "var(--link-color)" }}
                       >
                         Watch Video
                       </a>
                     </p>
                   )}
-                  <ul className="mb-2 space-y-2 ">
+                  <ul className='mb-2 space-y-2 '>
                     <ProjectLinks github={project.github} />
                     <ProjectTechnologies technologies={project.technologies} />
                   </ul>
@@ -413,15 +423,15 @@ const Projects = () => {
       ))}
 
       {/* ==== BEGIN: Explore More on GitHub ==== */}
-      <div className="px-4 py-6 flex justify-center">
+      <div className='px-4 py-6 flex justify-center'>
         <a
-          href="https://github.com/balshaer"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-bold text-lg underline"
+          href='https://github.com/jaipatel248/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='font-bold text-lg underline'
           style={{ color: "var(--link-color)" }}
         >
-          Explore more on GitHub 
+          Explore more on GitHub
         </a>
       </div>
       {/* ==== END: Explore More on GitHub ==== */}
