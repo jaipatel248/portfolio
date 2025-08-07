@@ -1314,3 +1314,11 @@ button {
   font-weight: 700;
   font-style: italic;
 }
+
+.w-13 {
+  width: 3.25rem;
+}
+
+.h-13 {
+  height: 3.25rem;
+}
