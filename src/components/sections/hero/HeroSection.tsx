@@ -1,5 +1,6 @@
 "use client";
 
+import { Avatar, AvatarImage } from "@/components/ui";
 import { useSocialLinks } from "@/hooks/use-social-links";
 import { memo } from "react";
 
@@ -28,20 +29,22 @@ function HeroSocialLinks() {
 
   return (
     <section>
-      <div className="w-full mx-auto">
-        <div className="text-left mb-4">
+      <div className='w-full mx-auto'>
+        <div className='text-left mb-4'>
           <p
-            className="text-[var(--paragraph)] text-sm pt-2"
+            className='text-[var(--paragraph)] text-sm pt-2'
             style={{ borderColor: "var(--card-border-color)" }}
           >
             Where to find me{" "}
-            <span className="text-[var(--headline)] font-medium">(digitally)</span>{" "}
+            <span className='text-[var(--headline)] font-medium'>
+              (digitally)
+            </span>{" "}
             if you wish to
           </p>
         </div>
 
-        <div className="mt-4 w-full max-w-2xl mx-auto">
-          <div className="flex flex-wrap justify-start gap-4">
+        <div className='mt-4 w-full max-w-2xl mx-auto'>
+          <div className='flex flex-wrap justify-start gap-4'>
             {socialLinks.map((social) => {
               const IconComponent =
                 iconsMap[social.icon.toLowerCase() as keyof typeof iconsMap];
@@ -50,9 +53,9 @@ function HeroSocialLinks() {
                 <a
                   key={social._id}
                   href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center rounded-lg px-3 py-2 font-medium text-xs gap-2 shadow transition focus:outline-none"
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='flex items-center rounded-lg px-3 py-2 font-medium text-xs gap-2 shadow transition focus:outline-none'
                   style={{
                     backgroundColor: "var(--card-background)",
                     color: "var(--headline)",
@@ -67,8 +70,8 @@ function HeroSocialLinks() {
                 >
                   {IconComponent && (
                     <IconComponent
-                      aria-hidden="true"
-                      className="text-[var(--paragraph)]"
+                      aria-hidden='true'
+                      className='text-[var(--paragraph)]'
                       size={16}
                     />
                   )}
@@ -87,10 +90,19 @@ function HeroSection() {
   return (
     <div className='header max-md:pt-[50px]'>
       <div className='header-content'>
-        <h1 className='header-title text-[var(--headline)]'>Jay Patel</h1>
-        <h1 className='subtitle capitalize text-[var(--headline)]'>
-          Full-Stack Developer
-        </h1>
+        <div className='flex items-center gap-2'>
+          <div>
+            <Avatar className='bg-[var(--secondary)] border border-[var(--input-border-color)] w-13 h-13'>
+              <AvatarImage src={"/logos/Jay-Avatar.jpg"} alt={"name"} />
+            </Avatar>
+          </div>
+          <div className='pt-1 text-start'>
+            <h1 className='header-title text-[var(--headline)]'>Jay Patel</h1>
+            <h1 className='subtitle capitalize text-[var(--headline)]'>
+              Full-Stack Developer
+            </h1>
+          </div>
+        </div>
         <p className='text-[var(--paragraph)]'>
           I’m a full-stack developer with 4+ years of experience in both
           front-end and back-end development, specializing in building robust,
