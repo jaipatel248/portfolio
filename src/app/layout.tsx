@@ -8,10 +8,9 @@ import { CustomDialogProvider } from "@/components/ui/custom-dialog";
 import FloatingActionButton from "@/components/ui/FloatingActionButton";
 import { domain, email, webImage, websitePath } from "@/data/Links";
 import { ThemeProvider } from "@/theme/theme-provider";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "sonner";
-
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${domain}`),
   title: {
