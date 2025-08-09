@@ -126,13 +126,13 @@ export default function RootLayout({
               image: webImage,
               sameAs: [
                 "https://github.com/jaipatel248/",
-                "https://www.linkedin.com/in/balshaer/",
-                "https://www.youtube.com/@Codewithbaraa",
+                "https://www.linkedin.com/in/jaipatel248",
+                // "https://www.youtube.com/@Codewithbaraa",
               ],
-              jobTitle: "Full Stack Developer",
+              jobTitle: "Software Engineer - II",
               worksFor: {
                 "@type": "Organization",
-                name: "Samtax",
+                name: "Alation",
               },
               description:
                 "Full Stack Developer with expertise in React, Node.js, TypeScript, and more.",
@@ -140,7 +140,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className='flex relative flex-col min-h-screen vsc-domain-localhost'>
+      <body className='flex relative flex-col min-h-screen vsc-domain-localhost vsc-domain-vigilant-advent'>
         <div className='absolute inset-0 -z-10 h-full w-full bg-[var(--background)] bg-[linear-gradient(to_right,var(--border-background)_1px,transparent_1px),linear-gradient(to_bottom,var(--border-background)_1px,transparent_1px)] bg-[size:6rem_4rem]'></div>
         <SpeedInsights />
         <Analytics />

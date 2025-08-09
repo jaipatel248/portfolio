@@ -314,6 +314,70 @@ export const ALL_SKILLS: SkillData[] = [
   //   category: "APIs & Protocols",
   // },
 
+  // Fundamentals
+  // {
+  //   name: "Data Structures and Algorithms",
+  //   icon: <MdDataObject title="Data Structures and Algorithms" className="text-gray-700" />,
+  //   category: "Fundamentals",
+  // },
+  // {
+  //   name: "Object-Oriented Programming",
+  //   icon: <FaCode title="OOP" className="text-gray-700" />,
+  //   category: "Fundamentals",
+  // },
+  // {
+  //   name: "Database Management Systems",
+  //   icon: <FaDatabase title="DBMS" className="text-gray-700" />,
+  //   category: "Fundamentals",
+  // },
+  // {
+  //   name: "Software Development",
+  //   icon: (
+  //     <FaProjectDiagram
+  //       title="Software Development"
+  //       className="text-gray-700"
+  //     />
+  //   ),
+  //   category: "Fundamentals",
+  // },
+  // {
+  //   name: "System Design",
+  //   icon: (
+  //     <FaProjectDiagram title="System Design" className="text-purple-600" />
+  //   ),
+  //   category: "Fundamentals",
+  // },
+  // {
+  //   name: "Software Testing & QA",
+  //   icon: <FaVial title="Software Testing & QA" className="text-red-600" />,
+  //   category: "Fundamentals",
+  // },
+  // {
+  //   name: "Data Modeling & Schema Design",
+  //   icon: <FaDatabase title="Data Modeling" className="text-gray-700" />,
+  //   category: "Fundamentals",
+  // },
+  // {
+  //   name: "Software Architecture & Design Patterns",
+  //   icon: (
+  //     <FaProjectDiagram
+  //       title="Software Architecture"
+  //       className="text-indigo-600"
+  //     />
+  //   ),
+  //   category: "Fundamentals",
+  // },
+  // {
+  //   name: "Agile & Scrum Methodologies",
+  //   icon: <SiScrumalliance title="Agile & Scrum" className="text-green-700" />,
+  //   category: "Fundamentals",
+  // },
+  // {
+  //   name: "Software Development Lifecycle (SDLC)",
+  //   icon: <FaClipboardList title="SDLC" className="text-blue-700" />,
+  //   category: "Fundamentals",
+  // },
+
   // Operating Systems
   {
     name: "macOS",

@@ -19,8 +19,9 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
-import { SkillsList, skillIconMap } from "@/components/ui/skills";
+import { SkillsList } from "@/components/ui/skills";
 import { cn } from "@/lib/utils";
+import { skillIconMap } from "./all-skills";
 
 const iconMap = {
   code: CodeXmlIcon,

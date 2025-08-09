@@ -90,7 +90,7 @@ function HeroSection() {
   return (
     <div className='header max-md:pt-[50px]'>
       <div className='header-content'>
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-3'>
           <div>
             <Avatar className='bg-[var(--secondary)] border border-[var(--input-border-color)] w-13 h-13'>
               <AvatarImage src={"/logos/Jay-Avatar.jpg"} alt={"name"} />
