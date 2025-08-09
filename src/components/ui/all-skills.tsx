@@ -1,74 +1,59 @@
 import { ReactNode } from "react";
 import {
   FaAws,
-  FaBrain,
-  FaCode,
   FaCss3Alt,
   FaDocker,
   FaGitAlt,
   FaHtml5,
   FaJava,
   FaLinux,
-  FaProjectDiagram,
-  FaPuzzlePiece,
   FaWindows,
 } from "react-icons/fa";
-import { GiArtificialIntelligence } from "react-icons/gi";
 import {
+  SiAmazondynamodb,
+  SiApachecassandra,
+  SiApachemaven,
   SiApple,
-  SiBitbucket,
+  SiBootstrap,
   SiC,
   SiCplusplus,
   SiDjango,
   SiFirebase,
   SiFlask,
-  SiGithubactions,
+  SiGithub,
   SiGitlab,
   SiGo,
-  SiGooglecloud,
   SiJavascript,
   SiJenkins,
   SiJira,
+  SiJquery,
   SiJsonwebtokens,
   SiLaravel,
-  SiMarkdown,
   SiMongodb,
   SiMui,
   SiMysql,
   SiNodedotjs,
-  SiOpenai,
-  SiOpencv,
+  SiNx,
+  SiOracle,
   SiPhp,
   SiPostgresql,
   SiPostman,
   SiPython,
   SiReact,
-  SiSwagger,
+  SiRedux,
+  SiSlack,
   SiTypescript,
   SiVuedotjs,
-  SiWebauthn,
-  SiWebpack,
-  SiXml,
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 export type SkillData = {
   name: string;
   icon: ReactNode;
   category: string;
 };
-
 export const ALL_SKILLS: SkillData[] = [
   // Programming Languages
-  {
-    name: "JavaScript",
-    icon: <SiJavascript title='JavaScript' className='text-yellow-400' />,
-    category: "Programming Languages",
-  },
-  {
-    name: "TypeScript",
-    icon: <SiTypescript title='TypeScript' className='text-blue-600' />,
-    category: "Programming Languages",
-  },
   {
     name: "Python",
     icon: <SiPython title='Python' className='text-blue-400' />,
@@ -80,43 +65,19 @@ export const ALL_SKILLS: SkillData[] = [
     category: "Programming Languages",
   },
   {
-    name: "PostgreSQL",
-    icon: <SiPostgresql title='PostgreSQL' className='text-blue-700' />,
+    name: "JavaScript",
+    icon: <SiJavascript title='JavaScript' className='text-yellow-400' />,
     category: "Programming Languages",
   },
   {
-    name: "MySQL",
-    icon: <SiMysql title='MySQL' className='text-blue-500' />,
-    category: "Databases",
+    name: "TypeScript",
+    icon: <SiTypescript title='TypeScript' className='text-blue-600' />,
+    category: "Programming Languages",
   },
-  {
-    name: "MySQL",
-    icon: <SiMysql title='MySQL' className='text-blue-500' />,
-    category: "Databases",
-  },
-  {
-    name: "MongoDB",
-    icon: <SiMongodb title='MongoDB' className='text-green-600' />,
-    category: "Databases",
-  },
-  {
-    name: "MySQL",
-    icon: <SiMysql title='MySQL' className='text-blue-500' />,
-    category: "Databases",
-  },
-  {
-    name: "MongoDB",
-    icon: <SiMongodb title='MongoDB' className='text-green-600' />,
-    category: "Databases",
-  },
+
   {
     name: "Go",
     icon: <SiGo title='Go' className='text-blue-600' />,
-    category: "Programming Languages",
-  },
-  {
-    name: "PHP",
-    icon: <SiPhp title='PHP' className='text-blue-600' />,
     category: "Programming Languages",
   },
   {
@@ -129,16 +90,16 @@ export const ALL_SKILLS: SkillData[] = [
     icon: <SiC title='C' className='text-blue-600' />,
     category: "Programming Languages",
   },
+  {
+    name: "PHP",
+    icon: <SiPhp title='PHP' className='text-blue-600' />,
+    category: "Programming Languages",
+  },
+
   // Libraries & Frameworks
   {
-    name: "React.js",
-    icon: <SiReact title='React.js' className='text-sky-500' />,
-    category: "Libraries & Frameworks",
-  },
-  // nx, RTK query, MUI, Django, Node.js, Redux
-  {
-    name: "Django Rest Framework",
-    icon: <SiDjango title='Django Rest Framework' className='text-green-700' />,
+    name: "Django REST Framework",
+    icon: <SiDjango title='Django REST Framework' className='text-green-700' />,
     category: "Libraries & Frameworks",
   },
   {
@@ -152,8 +113,18 @@ export const ALL_SKILLS: SkillData[] = [
     category: "Libraries & Frameworks",
   },
   {
+    name: "React.js",
+    icon: <SiReact title='React.js' className='text-sky-500' />,
+    category: "Libraries & Frameworks",
+  },
+  {
     name: "React Native",
     icon: <SiReact title='React Native' className='text-sky-500' />,
+    category: "Libraries & Frameworks",
+  },
+  {
+    name: "Laravel",
+    icon: <SiLaravel title='Laravel' className='text-red-600' />,
     category: "Libraries & Frameworks",
   },
   {
@@ -162,8 +133,18 @@ export const ALL_SKILLS: SkillData[] = [
     category: "Libraries & Frameworks",
   },
   {
-    name: "Laravel",
-    icon: <SiLaravel title='Laravel' className='text-red-600' />,
+    name: "Redux",
+    icon: <SiRedux title='Redux' className='text-purple-600' />,
+    category: "Libraries & Frameworks",
+  },
+  {
+    name: "RTK Query",
+    icon: <SiRedux title='RTK Query' className='text-purple-600' />,
+    category: "Libraries & Frameworks",
+  },
+  {
+    name: "NX",
+    icon: <SiNx title='NX' className='text-gray-700' />,
     category: "Libraries & Frameworks",
   },
   {
@@ -178,140 +159,96 @@ export const ALL_SKILLS: SkillData[] = [
     ),
     category: "Libraries & Frameworks",
   },
+
+  // Databases
+  {
+    name: "MySQL",
+    icon: <SiMysql title='MySQL' className='text-blue-500' />,
+    category: "Databases",
+  },
+  {
+    name: "PostgreSQL",
+    icon: <SiPostgresql title='PostgreSQL' className='text-blue-700' />,
+    category: "Databases",
+  },
+  {
+    name: "Oracle",
+    icon: <SiOracle title='Oracle' className='text-red-600' />,
+    category: "Databases",
+  },
+  {
+    name: "MongoDB",
+    icon: <SiMongodb title='MongoDB' className='text-green-600' />,
+    category: "Databases",
+  },
+  {
+    name: "Firebase",
+    icon: <SiFirebase title='Firebase' className='text-yellow-500' />,
+    category: "Databases",
+  },
+  {
+    name: "AWS DynamoDB",
+    icon: <SiAmazondynamodb title='AWS DynamoDB' className='text-orange-600' />,
+    category: "Databases",
+  },
+  {
+    name: "Cassandra",
+    icon: <SiApachecassandra title='Cassandra' className='text-purple-600' />,
+    category: "Databases",
+  },
+
+  // Web Technologies
+  {
+    name: "HTML",
+    icon: <FaHtml5 title='HTML' className='text-orange-500' />,
+    category: "Web Technologies",
+  },
+  {
+    name: "CSS",
+    icon: <FaCss3Alt title='CSS' className='text-blue-500' />,
+    category: "Web Technologies",
+  },
+  {
+    name: "jQuery",
+    icon: <SiJquery title='jQuery' className='text-blue-600' />,
+    category: "Web Technologies",
+  },
+  {
+    name: "JSON",
+    icon: <SiJsonwebtokens title='JSON' className='text-yellow-600' />,
+    category: "Web Technologies",
+  },
   // {
-  //   name: "Next.js",
-  //   icon: (
-  //     <SiNextdotjs title='Next.js' className='text-black dark:text-white' />
-  //   ),
-  //   category: "Libraries & Frameworks",
+  //   name: "AJAX",
+  //   icon: <SiAjax title="AJAX" className="text-blue-600" />,
+  //   category: "Web Technologies",
   // },
-  // {
-  //   name: "Express.js",
-  //   icon: <SiExpress title='Express.js' className='text-gray-700' />,
-  //   category: "Libraries & Frameworks",
-  // },
-  // {
-  //   name: "Prisma",
-  //   icon: <SiPrisma title='Prisma' className='text-indigo-600' />,
-  //   category: "Libraries & Frameworks",
-  // },
-  // {
-  //   name: "Tailwind CSS",
-  //   icon: <SiTailwindcss title='Tailwind CSS' className='text-cyan-400' />,
-  //   category: "Libraries & Frameworks",
-  // },
-  // {
-  //   name: "Bootstrap",
-  //   icon: <SiBootstrap title='Bootstrap' className='text-purple-700' />,
-  //   category: "Libraries & Frameworks",
-  // },
-  // {
-  //   name: "SASS",
-  //   icon: <SiSass title='SASS' className='text-pink-400' />,
-  //   category: "Libraries & Frameworks",
-  // },
-  // {
-  //   name: "FastAPI",
-  //   icon: <SiFastapi title='FastAPI' className='text-green-700' />,
-  //   category: "Libraries & Frameworks",
-  // },
+  {
+    name: "Bootstrap",
+    icon: <SiBootstrap title='Bootstrap' className='text-purple-700' />,
+    category: "Web Technologies",
+  },
+
   // Infrastructure & Tools
-  // {
-  //   name: "Node.js",
-  //   icon: <SiNodedotjs title='Node.js' className='text-green-700' />,
-  //   category: "Infrastructure & Tools",
-  // },
-  // Git, Gitlab, Github, JIRA, VS Code, Slack, AWS S3, Docker etc
   {
     name: "Git",
     icon: <FaGitAlt title='Git' className='text-orange-600' />,
     category: "Infrastructure & Tools",
   },
+  // Cloud Services
   {
-    name: "Docker",
-    icon: <FaDocker title='Docker' className='text-blue-400' />,
+    name: "AWS",
+    icon: <FaAws title='AWS' className='text-orange-600' />,
     category: "Infrastructure & Tools",
   },
   {
-    name: "RESTful APIs",
-    icon: <SiPostman title='RESTful APIs' className='text-orange-500' />,
+    name: "AWS S3",
+    icon: <FaAws title='AWS S3' className='text-orange-600' />,
     category: "Infrastructure & Tools",
   },
   {
-    name: "Webpack",
-    icon: <SiWebpack title='Webpack' className='text-blue-400' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "Google Cloud Platform",
-    icon: (
-      <SiGooglecloud
-        title='Google Cloud Platform'
-        className='text-yellow-500'
-      />
-    ),
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "GitHub Actions",
-    icon: <SiGithubactions title='GitHub Actions' className='text-gray-700' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "Firebase",
-    icon: <SiFirebase title='Firebase' className='text-yellow-500' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "JWT & OAuth",
-    icon: <SiJsonwebtokens title='JWT' className='text-yellow-600' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "OAuth",
-    icon: <SiWebauthn title='OAuth' className='text-blue-600' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "UML",
-    icon: <FaProjectDiagram title='UML' className='text-purple-600' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "Systems Design",
-    icon: (
-      <FaProjectDiagram title='Systems Design' className='text-purple-600' />
-    ),
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "OOP",
-    icon: <FaCode title='OOP' className='text-gray-700' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "Design Patterns",
-    icon: <FaPuzzlePiece title='Design Patterns' className='text-gray-700' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "Postman",
-    icon: <SiPostman title='Postman' className='text-orange-500' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "Swagger",
-    icon: <SiSwagger title='Swagger' className='text-blue-500' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "Jira",
-    icon: <SiJira title='Jira' className='text-blue-500' />,
-    category: "Infrastructure & Tools",
-  },
-  {
-    name: "Bitbucket",
-    icon: <SiBitbucket title='Bitbucket' className='text-blue-500' />,
+    name: "GitHub",
+    icon: <SiGithub title='GitHub' className='text-black' />,
     category: "Infrastructure & Tools",
   },
   {
@@ -320,43 +257,69 @@ export const ALL_SKILLS: SkillData[] = [
     category: "Infrastructure & Tools",
   },
   {
+    name: "Docker",
+    icon: <FaDocker title='Docker' className='text-blue-400' />,
+    category: "Infrastructure & Tools",
+  },
+  {
+    name: "VS Code",
+    icon: <VscVscode title='VS Code' className='text-blue-500' />,
+    category: "Infrastructure & Tools",
+  },
+  {
+    name: "JIRA",
+    icon: <SiJira title='JIRA' className='text-blue-500' />,
+    category: "Infrastructure & Tools",
+  },
+  {
+    name: "Slack",
+    icon: <SiSlack title='Slack' className='text-purple-600' />,
+    category: "Infrastructure & Tools",
+  },
+  {
+    name: "Maven",
+    icon: <SiApachemaven title='Maven' className='text-red-600' />,
+    category: "Infrastructure & Tools",
+  },
+  {
     name: "Jenkins",
     icon: <SiJenkins title='Jenkins' className='text-blue-500' />,
     category: "Infrastructure & Tools",
   },
+  // {
+  //   name: "GitHub Actions",
+  //   icon: <SiGithubactions title="GitHub Actions" className="text-gray-700" />,
+  //   category: "Infrastructure & Tools",
+  // },
   {
-    name: "AWS",
-    icon: <FaAws title='AWS' className='text-orange-600' />,
+    name: "Postman",
+    icon: <SiPostman title='Postman' className='text-orange-500' />,
     category: "Infrastructure & Tools",
   },
 
-  // AI & Machine Learning
-  {
-    name: "Machine Learning",
-    icon: <FaBrain title='Machine Learning' className='text-purple-600' />,
-    category: "AI & Machine Learning",
-  },
-  {
-    name: "Deep Learning",
-    icon: (
-      <GiArtificialIntelligence
-        title='Deep Learning'
-        className='text-indigo-600'
-      />
-    ),
-    category: "AI & Machine Learning",
-  },
-  {
-    name: "OpenCV",
-    icon: <SiOpencv title='OpenCV' className='text-green-700' />,
-    category: "AI & Machine Learning",
-  },
-  {
-    name: "OpenAI API",
-    icon: <SiOpenai title='OpenAI API' className='text-gray-700' />,
-    category: "AI & Machine Learning",
-  },
+  // // APIs & Protocols
+  // {
+  //   name: "RESTful APIs",
+  //   icon: <SiPostman title="RESTful APIs" className="text-orange-500" />,
+  //   category: "APIs & Protocols",
+  // },
+  // {
+  //   name: "Shopify API",
+  //   icon: <SiShopify title="Shopify API" className="text-green-600" />,
+  //   category: "APIs & Protocols",
+  // },
+  // {
+  //   name: "WhatsApp API",
+  //   icon: <SiWhatsapp title="WhatsApp API" className="text-green-500" />,
+  //   category: "APIs & Protocols",
+  // },
+
   // Operating Systems
+  {
+    name: "macOS",
+    icon: <SiApple title='macOS' className='text-gray-500' />,
+    category: "Operating Systems",
+  },
   {
     name: "Windows",
     icon: <FaWindows title='Windows' className='text-blue-500' />,
@@ -366,37 +329,6 @@ export const ALL_SKILLS: SkillData[] = [
     name: "Linux",
     icon: <FaLinux title='Linux' className='text-green-500' />,
     category: "Operating Systems",
-  },
-  {
-    name: "macOS",
-    icon: <SiApple title='macOS' className='text-gray-500' />,
-    category: "Operating Systems",
-  },
-  // Other
-  {
-    name: "HTML",
-    icon: <FaHtml5 title='HTML' className='text-orange-500' />,
-    category: "Other",
-  },
-  {
-    name: "CSS",
-    icon: <FaCss3Alt title='CSS' className='text-blue-500' />,
-    category: "Other",
-  },
-  {
-    name: "JSON",
-    icon: <SiJsonwebtokens title='JSON' className='text-yellow-600' />,
-    category: "Other",
-  },
-  {
-    name: "XML",
-    icon: <SiXml title='XML' className='text-yellow-600' />,
-    category: "Other",
-  },
-  {
-    name: "Markdown",
-    icon: <SiMarkdown title='Markdown' className='text-yellow-600' />,
-    category: "Other",
   },
 ];
 
