@@ -103,7 +103,7 @@ Update your portfolio by editing the data files in `src/data/`:
 - **Email**: imjp248@gmail.com
 - **LinkedIn**: [linkedin.com/in/balshaer](https://www.linkedin.com/in/jaipatel248/)
 - **GitHub**: [github.com/balshaer](https://github.com/jaipatel248/)
-- **Portfolio**: [alshaer.vercel.app](https://alshaer.vercel.app)
+- **Portfolio**: [jaipatel..vercel.app](https://jaipatel..vercel.app)
 
 ---
 

@@ -1,23 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import {
-  Sparkles,
-  Lightbulb,
-  RefreshCw,
-  Copy,
-  Check,
-  X,
-  Loader2,
-  Wand2,
-} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { Check, Copy, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
+import { useState } from "react";
 
 interface AITextEnhancerProps {
   originalText: string;

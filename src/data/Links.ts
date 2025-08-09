@@ -1,4 +1,4 @@
-export const domain = "alshaer.vercel.app";
+export const domain = "jaipatel.vercel.app";
 export const email = "imjp248@gmail.com";
 export const phoneNumber = "919999999999";
 export const linkedin = "https://www.linkedin.com/in/jaipatel248";
@@ -7,7 +7,7 @@ export const whatsapp = `https://wa.me/${phoneNumber}`;
 export const youtube = "https://www.youtube.com/@Codewithbaraa";
 export const mailto = `mailto:${email}`;
 export const alazhar = "https://www.alazhar.edu.ps/eng/index.asp";
-export const website = "https://alshaer.vercel.app/";
+export const website = "https://jaipatel..vercel.app/";
 
 export const websitePath = {
   main: `${website}`,
