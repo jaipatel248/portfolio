@@ -158,78 +158,77 @@ export default function Footer() {
   return (
     <div>
       {!ispath && (
-        <footer className="w-full mt-16 z-40 bg-gradient-to-br from-[var(--card-background)] via-[var(--card-background)] to-[var(--background)] border-t border-[var(--footer-border-color)]">
-          <div className="container mx-auto px-4 py-12">
+        <footer className='w-full mt-16 z-40 bg-gradient-to-br from-[var(--card-background)] via-[var(--card-background)] to-[var(--background)] border-t border-[var(--footer-border-color)]'>
+          <div className='container mx-auto px-4 py-12'>
             {/* Main Footer Content */}
 
             {/* Bottom Section */}
             <motion.div
               variants={itemVariants}
-              className=" border-[var(--footer-border-color)] "
+              className=' border-[var(--footer-border-color)] '
             >
-              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
                 {/* Copyright & Credits */}
-                <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-[var(--paragraph)]">
-                  <div className="flex items-center gap-2">
-                    <span>
-                      {displayContent.content.copyright}
-                    </span>
+                <div className='flex flex-col md:flex-row items-center gap-4 text-sm text-[var(--paragraph)]'>
+                  <div className='flex items-center gap-2'>
+                    <span>{displayContent.content.copyright}</span>
                   </div>
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex items-center gap-3">
+                <div className='flex items-center gap-3'>
                   <Button
-                    variant="ghost"
-                    size="sm"
+                    variant='ghost'
+                    size='sm'
                     onClick={scrollToTop}
-                    className="text-xs group max-md:hidden"
-                    aria-label="Back to top"
+                    className='text-xs group max-md:hidden'
+                    aria-label='Back to top'
                   >
                     <span>Back to top</span>
-                    <ArrowUp className="h-3 w-3 ml-1 group-hover:-translate-y-1 transition-transform" />
+                    <ArrowUp className='h-3 w-3 ml-1 group-hover:-translate-y-1 transition-transform' />
                   </Button>
                 </div>
               </div>
 
               {/* Additional Footer Info */}
-              <div className="mt-6 pt-6 border-t border-[var(--footer-border-color)]/50">
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--paragraph)]/70">
-                  <div className="flex items-center gap-4">
-                    <span className="flex items-center justify-center gap-1 text-[var(--paragraph)] hover:text-[var(--headline)] hoverd">
-                      <span>Built with Next.js </span>
+              {false && (
+                <div className='mt-6 pt-6 border-t border-[var(--footer-border-color)]/50'>
+                  <div className='flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--paragraph)]/70'>
+                    <div className='flex items-center gap-4'>
+                      <span className='flex items-center justify-center gap-1 text-[var(--paragraph)] hover:text-[var(--headline)] hoverd'>
+                        <span>Built with Next.js </span>
 
-                      <RiNextjsFill className="h-4 w-4" />
+                        <RiNextjsFill className='h-4 w-4' />
+                      </span>
+                      <Separator
+                        orientation='vertical'
+                        className='hidden md:block h-3'
+                      />
+                      <span className='flex items-center justify-center gap-1 text-[var(--paragraph)] hover:text-[var(--headline)] hoverd'>
+                        <span>Deployed on Render </span>
+                        <SiRender className='h-4 w-4' />
+                      </span>
+                    </div>
+                    <div className='flex items-center max-md:hidden gap-4'>
+                      <Link
+                        href='/sitemap.xml'
+                        className='hover:text-[var(--link-color)] transition-colors flex justify-center items-center gap-1'
+                      >
+                        <FaSitemap />
 
-                    </span>
-                    <Separator
-                      orientation="vertical"
-                      className="hidden md:block h-3"
-                    />
-                    <span className="flex items-center justify-center gap-1 text-[var(--paragraph)] hover:text-[var(--headline)] hoverd">
-                      <span>Deployed on Render </span>
-                      <SiRender className="h-4 w-4" />
-                    </span>
-                  </div>
-                  <div className="flex items-center max-md:hidden gap-4">
-                    <Link
-                      href="/sitemap.xml"
-                      className="hover:text-[var(--link-color)] transition-colors flex justify-center items-center gap-1"
-                    >
-                      <FaSitemap />
-
-                      <span>Sitemap</span>
-                    </Link>
+                        <span>Sitemap</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </motion.div>
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/5 to-purple-600/5 rounded-full blur-3xl" />
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-green-500/5 to-blue-500/5 rounded-full blur-3xl" />
+          <div className='absolute inset-0 pointer-events-none overflow-hidden'>
+            <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/5 to-purple-600/5 rounded-full blur-3xl' />
+            <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-green-500/5 to-blue-500/5 rounded-full blur-3xl' />
           </div>
         </footer>
       )}

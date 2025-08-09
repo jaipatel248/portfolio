@@ -11,8 +11,8 @@ import {
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
-import { SiGithub } from "react-icons/si";
+import { FaEnvelope, FaFacebook, FaStackOverflow } from "react-icons/fa";
+import { SiGithub, SiLeetcode } from "react-icons/si";
 
 const iconsMap = {
   github: SiGithub,
@@ -22,6 +22,9 @@ const iconsMap = {
   email: AiOutlineMail,
   whatsapp: AiOutlineWhatsApp,
   facebook: FaFacebook,
+  envelope: FaEnvelope,
+  stackoverflow: FaStackOverflow,
+  leetcode: SiLeetcode,
 };
 
 function HeroSocialLinks() {
@@ -43,7 +46,7 @@ function HeroSocialLinks() {
           </p>
         </div>
 
-        <div className='mt-4 w-full max-w-2xl mx-auto'>
+        <div className='mt-4 w-full max-w-3xl mx-auto'>
           <div className='flex flex-wrap justify-start gap-4'>
             {socialLinks.map((social) => {
               const IconComponent =
@@ -90,20 +93,22 @@ function HeroSection() {
   return (
     <div className='header max-md:pt-[50px]'>
       <div className='header-content'>
-        <div className='flex items-center gap-3'>
+        <div className='flex items-center gap-3 max-md:pt-[50px]'>
           <div>
             <Avatar className='bg-[var(--secondary)] border border-[var(--input-border-color)] w-13 h-13'>
               <AvatarImage src={"/logos/Jay-Avatar.jpg"} alt={"name"} />
             </Avatar>
           </div>
-          <div className='pt-1 text-start'>
-            <h1 className='header-title text-[var(--headline)]'>Jay Patel</h1>
+          <div className='text-start'>
+            <h1 className='header-title text-[var(--headline)] pt-0'>
+              Jay Patel
+            </h1>
             <h1 className='subtitle capitalize text-[var(--headline)]'>
               Full-Stack Developer
             </h1>
           </div>
         </div>
-        <p className='text-[var(--paragraph)]'>
+        <p className='text-[var(--paragraph)] mt-2'>
           I’m a full-stack developer with 4+ years of experience in both
           front-end and back-end development, specializing in building robust,
           scalable, and intelligent web applications. My passion lies in
