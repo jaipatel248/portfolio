@@ -23,6 +23,17 @@ interface UseSocialLinksReturn {
 
 const mockSocialLinks: SocialLink[] = [
   {
+    _id: "2",
+    platform: "LinkedIn",
+    url: "https://www.linkedin.com/in/jaipatel248/",
+    icon: "linkedin",
+    iconLibrary: "fontawesome",
+    isActive: true,
+    order: 2,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
     _id: "1",
     platform: "GitHub",
     url: "https://github.com/jaipatel248/",
@@ -34,13 +45,13 @@ const mockSocialLinks: SocialLink[] = [
     updatedAt: new Date().toISOString(),
   },
   {
-    _id: "2",
-    platform: "LinkedIn",
-    url: "https://www.linkedin.com/in/jaipatel248/",
-    icon: "linkedin",
+    _id: "6",
+    platform: "LeetCode",
+    url: "https://leetcode.com/u/jai248/",
+    icon: "leetcode",
     iconLibrary: "fontawesome",
     isActive: true,
-    order: 2,
+    order: 6,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
@@ -72,25 +83,16 @@ const mockSocialLinks: SocialLink[] = [
     url: "https://wa.me/919999999999",
     icon: "whatsapp",
     iconLibrary: "fontawesome",
-    isActive: true,
+    isActive: false,
     order: 5,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-  },
-  {
-    _id: "6",
-    platform: "LeetCode",
-    url: "https://leetcode.com/u/jai248/",
-    icon: "leetcode",
-    iconLibrary: "fontawesome",
-    isActive: true,
-    order: 6,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
 ];
 
-export function useSocialLinks(activeOnly: boolean = true): UseSocialLinksReturn {
+export function useSocialLinks(
+  activeOnly: boolean = true
+): UseSocialLinksReturn {
   const [socialLinks, setSocialLinks] = useState<SocialLink[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -103,8 +105,6 @@ export function useSocialLinks(activeOnly: boolean = true): UseSocialLinksReturn
       const links = activeOnly
         ? mockSocialLinks.filter((link) => link.isActive)
         : mockSocialLinks;
-
-      await new Promise((resolve) => setTimeout(resolve, 300));
 
       setSocialLinks(links);
     } catch {
