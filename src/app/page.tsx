@@ -3,6 +3,7 @@
 import Achievements from "@/components/sections/achievements/Achievements";
 import WorkExperienceSection from "@/components/sections/experience/WorkExperienceSection";
 import HeroSection from "@/components/sections/hero/HeroSection";
+import Projects from "@/components/sections/projects/Projects";
 import SkillsSection from "@/components/sections/skills/SkillsSection";
 
 export default function HomePage() {
@@ -18,9 +19,9 @@ export default function HomePage() {
         <WorkExperienceSection />
       </div>
 
-      {/* <div id="projects" className="py-4 border-t mt-6">
+      <div id='projects' className='py-4 border-t mt-6'>
         <Projects />
-      </div> */}
+      </div>
 
       <div id='achievements' className='py-4 border-t mt-6'>
         <Achievements />
