@@ -46,9 +46,9 @@ export default function Navbar() {
     path.startsWith("/admin");
 
   const navItems: NavItem[] = [
-    // { label: "Work", href: "/#work" },
-    // { label: "Skills", href: "/#skills" },
-    // { label: "Projects", href: "/#projects" },
+    { label: "Skills", href: "/#skills" },
+    { label: "Work", href: "/#work" },
+    { label: "Projects", href: "/#projects" },
     // { label: "Post", href: "/posts" },
     // { label: "Say Hi", href: "/contact" },
   ];
