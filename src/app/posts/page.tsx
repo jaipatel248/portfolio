@@ -6,40 +6,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Metadata } from "next";
 
-import { webImage, websitePath } from "@/data/Links";
-
-// Enhanced metadata for better SEO
-export const metadata: Metadata = {
-  title: "Blog Posts | Web Development & Technology Insights",
-  description:
-    "Explore the latest blog posts by Jay Patel, a Full Stack Developer. Stay updated with insights, tutorials, and projects related to web development, React, Node.js, TypeScript, and modern technology trends.",
-  keywords:
-    "web development blog, React tutorials, Node.js articles, TypeScript tips, full stack development, coding tutorials, tech insights, software engineering blog",
-  openGraph: {
-    title: "Blog Posts - Jay Patel | Web Development & Technology Insights",
-    description:
-      "Discover the latest posts and articles by Jay Patel, a Full Stack Developer sharing his insights on web development, React, Node.js, TypeScript, and other cutting-edge technologies.",
-    url: websitePath.posts,
-    images: [
-      {
-        url: webImage,
-        width: 400,
-        height: 400,
-        alt: "Jay Patel Blog Posts",
-      },
-    ],
-    type: "article",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Blog Posts - Jay Patel | Web Development & Technology Insights",
-    description:
-      "Explore the latest blog posts by Jay Patel, a Full Stack Developer. Stay updated with insights, tutorials, and projects related to web development, technology, and more.",
-    images: webImage,
-  },
-};
 
 export default function PostsPage() {
   const styles = {
@@ -76,7 +43,7 @@ export default function PostsPage() {
                     className={styles.breadcrumbLink}
                     href={"/posts"}
                   >
-                    Posts
+                    Blogs
                   </BreadcrumbLink>
                 </BreadcrumbItem>
               </BreadcrumbList>

@@ -123,7 +123,7 @@ const LinksSection: React.FC = () => {
               </span>
               <span className="flex h-full items-center justify-center gap-2 text-[var(--headline)] opacity-80 hover:opacity-100">
                 <span className="max-md:hidden">
-                  {getIconComponent(item.icon, item.iconLibrary)}
+                  {/* {getIconComponent(item.icon, item.iconLibrary)} */}
                 </span>
                 <span className="animated-underline">{item.platform}</span>
               </span>
