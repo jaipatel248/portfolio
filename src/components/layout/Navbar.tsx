@@ -49,7 +49,7 @@ export default function Navbar() {
     { label: "Skills", href: "/#skills" },
     { label: "Work", href: "/#work" },
     { label: "Projects", href: "/#projects" },
-    // { label: "Post", href: "/posts" },
+    { label: "Post", href: "/posts" },
     // { label: "Say Hi", href: "/contact" },
   ];
 
