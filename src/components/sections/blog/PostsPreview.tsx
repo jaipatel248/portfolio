@@ -1,11 +1,10 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
+import usePosts from "@/hooks/use-posts";
 import { motion } from "framer-motion";
-import { FileWarning, Github, Globe, RepeatIcon } from "lucide-react";
-import Link from "next/link";
-import React, { useState } from "react";
+import { FileWarning, RepeatIcon } from "lucide-react";
+import { useState } from "react";
 import ReusableCard from "../../layout/ReusableCard";
 import { Button } from "../../ui/button";
 import { Card, CardContent, CardFooter } from "../../ui/card";
@@ -22,41 +21,8 @@ export default function PostsPreview() {
       "flex items-center justify-center gap-1 text-sm text-[var(--headline)] opacity-70 hoverd hover:opacity-100",
   };
 
-  const isValidLink = (link: string | undefined) => {
-    return link && link.trim() !== "" && link !== "#";
-  };
-
-  const [posts, setPosts] = React.useState<any[]>([]);
-  const [loading, setLoading] = React.useState(true);
   const [flag, setflag] = useState(false);
-
-  React.useEffect(() => {
-    const fetchPosts = async () => {
-      const startTime = Date.now();
-      const minLoadingTime = 1500; // Minimum 1.5 seconds for skeleton
-
-      try {
-        const response = await fetch(
-          "https://dev.to/api/articles?username=baraa",
-        );
-        const data = await response.json();
-        setPosts(data);
-      } catch (error) {
-        console.error("Error fetching posts:", error);
-        setflag(true);
-      } finally {
-        // Ensure minimum loading time
-        const elapsedTime = Date.now() - startTime;
-        const remainingTime = Math.max(0, minLoadingTime - elapsedTime);
-
-        setTimeout(() => {
-          setLoading(false);
-        }, remainingTime);
-      }
-    };
-
-    fetchPosts();
-  }, []);
+  const { posts, loading, error } = usePosts({});
 
   const reload = () => {};
 
@@ -113,63 +79,21 @@ export default function PostsPreview() {
                 </motion.div>
               ))
           : // Show posts once data is fetched
-            posts.map((post: any) => (
+            posts.map((post) => (
               <ReusableCard
                 key={post.id}
                 id={post.id}
                 title={post.title}
-                description={post.description}
-                skills={Array.isArray(post.tags) ? post.tags : []}
-                websiteLink={post.url}
-                githubLink={post.github_url}
+                description={post.excerpt}
+                skills={Array.isArray(post.categories) ? post.categories : []}
+                websiteLink={post.link}
+                githubLink={post.link}
+                date={post.pubDate}
                 linkStyle={styles.linkStyle}
                 className="pb-4 pt-2"
                 dir={direction}
-                coverImg={
-                  post.cover_image ||
-                  "https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&fit=max"
-                } // Passing image URL as 'img' prop
-              >
-                <div className="flex max-w-[60%] flex-wrap gap-2 max-md:mb-0 max-md:mt-4 max-md:max-w-full">
-                  {Array.isArray(post.tags) && post.tags.length > 0 ? (
-                    post.tags.map((tag: string, tagIndex: number) => (
-                      <Badge key={tagIndex}>{tag}</Badge>
-                    ))
-                  ) : (
-                    <span>No tags available</span>
-                  )}
-                </div>
-
-                <div className="flex flex-wrap gap-4 max-md:mt-5">
-                  {isValidLink(post.url) && (
-                    <Link
-                      href={post.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.linkStyle}
-                    >
-                      <span>
-                        <Globe className="h-4 w-4" />
-                      </span>
-                      <span>Visit Website</span>
-                    </Link>
-                  )}
-
-                  {isValidLink(post.github_url) && (
-                    <Link
-                      href={post.github_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.linkStyle}
-                    >
-                      <span>
-                        <Github className="h-4 w-4" />
-                      </span>
-                      <span>Visit Github</span>
-                    </Link>
-                  )}
-                </div>
-              </ReusableCard>
+                coverImg={post.thumbnail} // Passing image URL as 'img' prop
+              />
             ))}
 
         {flag && (

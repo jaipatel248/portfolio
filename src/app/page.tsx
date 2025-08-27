@@ -1,6 +1,7 @@
 "use client";
 
 import Achievements from "@/components/sections/achievements/Achievements";
+import PostSection from "@/components/sections/blog/PostSection";
 import WorkExperienceSection from "@/components/sections/experience/WorkExperienceSection";
 import HeroSection from "@/components/sections/hero/HeroSection";
 import Projects from "@/components/sections/projects/Projects";
@@ -8,32 +9,33 @@ import SkillsSection from "@/components/sections/skills/SkillsSection";
 
 export default function HomePage() {
   return (
-    <div className='container mx-auto'>
+    <div className="container mx-auto">
       <HeroSection />
 
-      <div id='skills' className='py-4 border-t mt-6'>
+      <div id="skills" className="py-4 border-t mt-6">
         <SkillsSection />
       </div>
 
-      <div id='work' className='py-4 border-t mt-6'>
+      <div id="work" className="py-4 border-t mt-6">
         <WorkExperienceSection />
       </div>
 
-      <div id='projects' className='py-4 border-t mt-6'>
+      <div id="projects" className="py-4 border-t mt-6">
         <Projects />
       </div>
 
-      <div id='achievements' className='py-4 border-t mt-6'>
+      <div id="achievements" className="py-4 border-t mt-6">
         <Achievements />
-      </div>
-
-      {/* <div className="py-4 border-t mt-6">
-        <RecommendationsSection />
       </div>
 
       <div className="py-4 border-t mt-6">
         <PostSection />
-      </div> */}
+      </div>
+      {/* <div className="py-4 border-t mt-6">
+        <RecommendationsSection />
+      </div>
+
+
 
       {/* <ClickSpark
         sparkColor="var(--headline)"
