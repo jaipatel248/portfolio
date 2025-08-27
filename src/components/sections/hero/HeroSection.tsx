@@ -1,31 +1,7 @@
 "use client";
-
 import { Avatar, AvatarImage } from "@/components/ui";
 import { useSocialLinks } from "@/hooks/use-social-links";
 import { memo } from "react";
-
-import {
-  AiFillTwitterCircle,
-  AiFillYoutube,
-  AiOutlineMail,
-  AiOutlineWhatsApp,
-} from "react-icons/ai";
-import { BsLinkedin } from "react-icons/bs";
-import { FaEnvelope, FaFacebook, FaStackOverflow } from "react-icons/fa";
-import { SiGithub, SiLeetcode } from "react-icons/si";
-
-const iconsMap = {
-  github: SiGithub,
-  linkedin: BsLinkedin,
-  youtube: AiFillYoutube,
-  twitter: AiFillTwitterCircle,
-  email: AiOutlineMail,
-  whatsapp: AiOutlineWhatsApp,
-  facebook: FaFacebook,
-  envelope: FaEnvelope,
-  stackoverflow: FaStackOverflow,
-  leetcode: SiLeetcode,
-};
 
 function HeroSocialLinks() {
   const { socialLinks } = useSocialLinks(true);
@@ -49,8 +25,7 @@ function HeroSocialLinks() {
         <div className='mt-4 w-full max-w-3xl mx-auto'>
           <div className='flex flex-wrap justify-start gap-4'>
             {socialLinks.map((social) => {
-              const IconComponent =
-                iconsMap[social.icon.toLowerCase() as keyof typeof iconsMap];
+              const IconComponent = social.icon;
 
               return (
                 <a
