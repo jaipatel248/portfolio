@@ -47,7 +47,7 @@ export const socialLinksData: SocialLink[] = [
   {
     _id: "social_4",
     platform: "Email",
-    url: "mailto:imjp248@gmail.com",
+    url: "mailto:jaypatel248@zohomail.in",
     icon: "FaEnvelope",
     iconLibrary: "fa",
     isActive: true,

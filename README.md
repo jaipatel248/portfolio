@@ -100,7 +100,7 @@ Update your portfolio by editing the data files in `src/data/`:
 
 ## Contact
 
-- **Email**: imjp248@gmail.com
+- **Email**: jaypatel248@zohomail.in
 - **LinkedIn**: [linkedin.com/in/balshaer](https://www.linkedin.com/in/jaipatel248/)
 - **GitHub**: [github.com/balshaer](https://github.com/jaipatel248/)
 - **Portfolio**: [jaipatel..vercel.app](https://jaipatel..vercel.app)

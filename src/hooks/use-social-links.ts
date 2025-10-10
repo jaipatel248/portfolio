@@ -90,7 +90,7 @@ const mockSocialLinks: SocialLink[] = [
   {
     _id: "4",
     platform: "Email Me",
-    url: "mailto:imjp248@gmail.com",
+    url: "mailto:jaypatel248@zohomail.in",
     icon: FaEnvelope,
     isActive: true,
     order: 4,
